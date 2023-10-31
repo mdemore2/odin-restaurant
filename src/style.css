@@ -19,8 +19,17 @@
 
 #content {
     display: flex;
-    gap: 16px;
     flex-direction: column;
+
+}
+
+div:not(#content) {
+    padding: 16px;
+}
+
+.main {
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-color);
 }
 
 h1 {
@@ -40,10 +49,8 @@ nav {
 
 div {
     flex: 1;
-    gap: 16px;
     display: flex;
     flex-direction: column;
-    padding: 8px;
 }
 
 form {
@@ -68,7 +75,7 @@ input {
 }
 
 .emphasis {
-    background-color: var(--secondary-bg-color);
-    color: var(--secondary-color);
+    background-color: var(--tertiary-bg-color);
+    color: var(--tertiary-color);
 
 }

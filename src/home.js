@@ -40,6 +40,8 @@ function reservations(){
 
 function reviews(){
     const reviews = document.createElement('div');
+    reviews.classList.add("main");
+
     const label = document.createElement('h3');
     label.textContent = 'Reviews';
     reviews.appendChild(label);
@@ -54,6 +56,8 @@ function reviews(){
 
 function about(){
     const about = document.createElement('div');
+    about.classList.add("main");
+
     const label = document.createElement('h3');
     label.textContent = 'About Us';
     about.appendChild(label);
