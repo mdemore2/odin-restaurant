@@ -3,7 +3,7 @@ function reservations(){
     const reservations = document.createElement('div');
     reservations.classList.add("emphasis");
     const label = document.createElement('h3');
-    label.textContent = 'Reservations:';
+    label.textContent = 'Reservations';
     reservations.appendChild(label);
 
     const resForm = document.createElement('form')
@@ -38,13 +38,41 @@ function reservations(){
 
 }
 
+function reviews(){
+    const reviews = document.createElement('div');
+    const label = document.createElement('h3');
+    label.textContent = 'Reviews';
+    reviews.appendChild(label);
+    const quote = document.createElement('blockquote');
+
+    quote.innerHTML = `<p>Great food, killer vibes, and incredible gabagool!</p><footer>-Tony Soprano</footer>`;
+
+    reviews.appendChild(quote);
+
+    return reviews;
+}
+
+function about(){
+    const about = document.createElement('div');
+    const label = document.createElement('h3');
+    label.textContent = 'About Us';
+    about.appendChild(label);
+
+    const desc = document.createElement('h6');
+    desc.textContent = `A family owned Italian eatery proudly serving the greater Kansas City metropolitan area since 1937!`;
+    about.appendChild(desc); 
+    
+    return about;
+}
+
  
 
 function home() {
     const content = document.getElementById('content');
 
+    content.appendChild(about());
     content.appendChild(reservations());
-
+    content.appendChild(reviews());
 }
 
 export default home;
