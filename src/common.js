@@ -4,7 +4,7 @@ function clearPage(){
 }
 
 function header(){
-    const header = document.createElement('header');
+    const header = document.createElement('div');
     const title = document.createElement('h1');
     title.textContent = 'Gabagool Galleria';
     header.appendChild(title);

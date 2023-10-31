@@ -1,6 +1,11 @@
 function reservations(){
 
-    const reservations = document.createElement('div')
+    const reservations = document.createElement('div');
+    reservations.classList.add("emphasis");
+    const label = document.createElement('h3');
+    label.textContent = 'Reservations:';
+    reservations.appendChild(label);
+
     const resForm = document.createElement('form')
     
     // Create an input element for Name
@@ -20,7 +25,7 @@ function reservations(){
 
     var party = document.createElement("input");
     party.setAttribute("type", "number");
-    party.setAttribute("placeholder", "2");
+    party.setAttribute("placeholder", "Party Size");
 
     resForm.appendChild(name);
     resForm.appendChild(email);
@@ -32,6 +37,8 @@ function reservations(){
     return reservations;
 
 }
+
+ 
 
 function home() {
     const content = document.getElementById('content');
