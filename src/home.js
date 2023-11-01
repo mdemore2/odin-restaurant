@@ -73,6 +73,15 @@ function about(){
 
 function home() {
     const content = document.getElementById('content');
+    const homeBtn = document.getElementById('home');
+    homeBtn.classList.add('selected');
+
+    const contactBtn = document.getElementById('contact');
+    const menuBtn = document.getElementById('menu');
+    contactBtn.classList.remove('selected');
+    menuBtn.classList.remove('selected');
+
+
 
     content.appendChild(about());
     content.appendChild(reservations());

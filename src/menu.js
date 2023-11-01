@@ -1,9 +1,16 @@
 function buildMenu() {
-    //generated this function with Bard
+    //generated most of this function with Bard
 
     // Create an empty HTML div element
     const div = document.createElement("div");
-  
+    div.classList.add('emphasis');
+
+    const title = document.createElement("h2");
+    title.textContent = "Menu";
+    div.appendChild(title);
+    
+    const hr = document.createElement("hr");
+    div.appendChild(hr);
     // Create an unordered list element
     const ul = document.createElement("ul");
   
@@ -46,6 +53,13 @@ function buildMenu() {
 
 function menu(){
     const content = document.getElementById('content');
+    const menuBtn = document.getElementById('menu');
+    menuBtn.classList.add('selected');
+
+    const contactBtn = document.getElementById('contact');
+    const homeBtn = document.getElementById('home');
+    contactBtn.classList.remove('selected');
+    homeBtn.classList.remove('selected');
 
     content.appendChild(buildMenu());
 }

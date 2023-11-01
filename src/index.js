@@ -2,6 +2,7 @@ import './style.css';
 import home from './home';
 import menu from './menu';
 import contact from './contact';
+import Logo from './cutlery.png';
 
 
 function clearPage(){
@@ -11,8 +12,11 @@ function clearPage(){
 
 function header(){
     const header = document.createElement('div');
+    const myLogo = new Image(64, 64);
+    myLogo.src = Logo;
     const title = document.createElement('h1');
     title.textContent = 'Gabagool Galleria';
+    title.insertAdjacentElement("afterbegin", myLogo);
     header.appendChild(title);
 
     const nav = document.createElement('nav');
@@ -21,8 +25,11 @@ function header(){
     const contactBtn = document.createElement('button');
 
     homeBtn.textContent = 'Home';
+    homeBtn.id = 'home';
     menuBtn.textContent = 'Menu';
+    menuBtn.id = 'menu';
     contactBtn.textContent = 'Contact';
+    contactBtn.id = 'contact';
 
     nav.appendChild(homeBtn);
     nav.appendChild(menuBtn);
